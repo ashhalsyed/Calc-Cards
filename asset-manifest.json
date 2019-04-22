@@ -1,13 +1,13 @@
 {
-  "main.css": "/Calc-Cards/static/css/main.77faef1e.chunk.css",
-  "main.js": "/Calc-Cards/static/js/main.82791073.chunk.js",
-  "main.js.map": "/Calc-Cards/static/js/main.82791073.chunk.js.map",
-  "runtime~main.js": "/Calc-Cards/static/js/runtime~main.04ccc6f1.js",
-  "runtime~main.js.map": "/Calc-Cards/static/js/runtime~main.04ccc6f1.js.map",
-  "static/js/2.db9ab169.chunk.js": "/Calc-Cards/static/js/2.db9ab169.chunk.js",
-  "static/js/2.db9ab169.chunk.js.map": "/Calc-Cards/static/js/2.db9ab169.chunk.js.map",
-  "index.html": "/Calc-Cards/index.html",
-  "precache-manifest.d8c9a53d4ebb0a64584421d299e8ddfb.js": "/Calc-Cards/precache-manifest.d8c9a53d4ebb0a64584421d299e8ddfb.js",
-  "service-worker.js": "/Calc-Cards/service-worker.js",
-  "static/css/main.77faef1e.chunk.css.map": "/Calc-Cards/static/css/main.77faef1e.chunk.css.map"
+  "main.css": "/Calc_Cards/static/css/main.77faef1e.chunk.css",
+  "main.js": "/Calc_Cards/static/js/main.f218842f.chunk.js",
+  "main.js.map": "/Calc_Cards/static/js/main.f218842f.chunk.js.map",
+  "runtime~main.js": "/Calc_Cards/static/js/runtime~main.b75eb1aa.js",
+  "runtime~main.js.map": "/Calc_Cards/static/js/runtime~main.b75eb1aa.js.map",
+  "static/js/2.db9ab169.chunk.js": "/Calc_Cards/static/js/2.db9ab169.chunk.js",
+  "static/js/2.db9ab169.chunk.js.map": "/Calc_Cards/static/js/2.db9ab169.chunk.js.map",
+  "index.html": "/Calc_Cards/index.html",
+  "precache-manifest.28b62f7d0908db6e8fc0722c0c639fa5.js": "/Calc_Cards/precache-manifest.28b62f7d0908db6e8fc0722c0c639fa5.js",
+  "service-worker.js": "/Calc_Cards/service-worker.js",
+  "static/css/main.77faef1e.chunk.css.map": "/Calc_Cards/static/css/main.77faef1e.chunk.css.map"
 }
