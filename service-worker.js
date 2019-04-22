@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Calc_Cards/precache-manifest.28b62f7d0908db6e8fc0722c0c639fa5.js"
+  "/Calc-Cards/precache-manifest.09facc649c31a0a8b39647f73adfb051.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Calc_Cards/index.html", {
+workbox.routing.registerNavigationRoute("/Calc-Cards/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
