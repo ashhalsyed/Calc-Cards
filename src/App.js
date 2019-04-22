@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter basename="/Calc_Cards">
+        <BrowserRouter basename="/Calc-Cards">
             <Switch>
               <Route path = "/" component = {HomeScreen} exact/>
               <Route path = "/SAS" component = {CardContent}/>
