@@ -1,0 +1,27 @@
+{
+    "cards" : [
+        
+        {
+            "id": 1,
+            "title": "SAS",
+            "description": "Calculate Side c from Side a, Side b, and Angle C",
+            "image": "https://lh3.googleusercontent.com/eySWR1LXJuw_bzLkKw3ynknxPCXbGadIz7JAMI9Mvb6ZPA96VZpu92XBnKvqrzguwbv1FqKgWAWcFRbyyhHC6q3T16UdW4gSY0kErbPqt3vKIbLJjcin_ye4AwySVcRQw7Tw6ybcAA=w175-h200-no",
+            "inputs": ["Side a", "Side b", "Angle C"],
+            "bounds": [[0,"none"],[0,"none"],[0,180]],
+            "steps": ["Substitude side 'a', side 'b', and angle 'C' into given general equation for SAS", "Simplify"],
+            "formula": "c = (a^2 + b^2 -2ab cosC)^(1/2)"
+        },
+
+        {
+            "id": 2,
+            "title": "SSS",
+            "description": "Calculate Angle C from Side a, Side b, and Side c",
+            "image": "https://lh3.googleusercontent.com/RP9n1rwaMw8-9xpFVQRVSihhy7Js10tjx0Rw9rtAf_j4FTTIIfiy7LIGgtxnuFQwH7au7F29i-yHOuGwDE-jEWWJ-KXq5P9GJpTj-tbgkVlIzCHFOi0_-liCxJwrpiPEMvo9jyoWfQ=w175-h200-no",
+            "inputs": ["Side a", "Side b", "Side c"],
+            "bounds": [[0,"none"],[0,"none"],[0,"none"]],
+            "steps": ["Substitude side 'a', side 'b', and side 'c' into given general equation for SSS", "Simplify"],
+            "formula": "C = cos^(-1)((a^2+b^2-c^2)/2ab)"
+        }
+
+    ]
+}

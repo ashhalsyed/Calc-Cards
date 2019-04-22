@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* ::-moz-selection {
+  background: rgba(76, 0, 255, 0.8);
+  color: white;
+}
+
+* ::selection {
+  background: rgba(76, 0, 255, 0.8);
+  color: white;
+}
+
+.CardHolderStyle {
+  padding: 0 1em 1em 1em;
+  background-color: #101D29;
+}
+
+.Card {
+  min-Height: 15em;
+  background-color: white;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+  word-wrap: break-word;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25), 0 0.25em 0.5em rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25), 0 0.25em 0.5em rgba(0, 0, 0, 0.22);
+}
+
+.Card .Card_Topbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.5em;
+  min-height: 3em;
+}
+
+.Card .Card_Topbar .Card_title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.Card .Card_Topbar .Card_interact_item {
+  min-width: 4em;
+  min-height: 4em;
+  background: none;
+  border: none;
+  border-radius: 100%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Card .Card_Topbar .Card_interact_item .fas.fa-share {
+  font-size: 1.5em;
+}
+
+.Card .Card_Topbar .Card_interact_item .fas.fa-save {
+  font-size: 1.5em;
+}
+
+.Card .Card_Topbar .Card_interact_item:hover {
+  background-color: #ececec;
+  -webkit-box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.25), 0 0.1em 0.2em rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.25), 0 0.1em 0.2em rgba(0, 0, 0, 0.22);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.Card .Card_image {
+  min-height: 13em;
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Card .Card_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 0 0 0.5em 0.5em;
+  min-height: 4em;
+  padding: 1em;
+}
+
+.Card .Card_text .Card_description {
+  background-color: #ffffff;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.NavBar {
+  background-color: #101D29;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+.NavBar .navBar_item {
+  min-width: 3em;
+  min-height: 3em;
+  background: none;
+  border: none;
+  border-radius: 2em;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.NavBar .navBar_item:hover {
+  background-color: #0000002f;
+  -webkit-box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.25), 0 0.1em 0.2em rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.25), 0 0.1em 0.2em rgba(0, 0, 0, 0.22);
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.NavBar .navBar_item .fas.fa-bars {
+  font-size: 2.2em;
+  color: #E9F0F7;
+}
+
+.NavBar .navBar_item .fas.fa-search {
+  font-size: 1.8em;
+  color: #223040;
+  margin-left: 0.5em;
+}
+
+.NavBar .navBar_item.Search {
+  width: 75%;
+  background-color: #AEC5D6;
+}
+
+.NavBar .navBar_item.Menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=allStyles.css.map */

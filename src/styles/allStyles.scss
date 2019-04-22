@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
+* {
+    margin: 0; 
+    padding: 0; 
+    ::selection { 
+        background:rgba(85, 153, 255, 0.8);
+        color: black;
+    }
+}
+
+.HomeScreen {
+    background-color: #101D29;
+    padding: 1em 1em 1em 1em;
+    min-height: 100vh;
+
+}
+
+.Card {
+    min-Height: 15em;
+    background-color: white;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    word-wrap: break-word;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0.25em 0.5em rgba(0,0,0,0.25), 0 0.25em 0.5em rgba(0,0,0,0.22);
+    font-family: "Quicksand", sans-serif;
+    // animation: cardDisplayed 0s forwards ease-in-out;
+
+    .Card_Topbar {
+        display: flex;
+        // justify-content: space-between;
+        //Visibilty is hidden in "interact_item"
+        justify-content: center;
+        margin: 0.5em;
+        min-height: 2.5em;
+
+        .Card_title {
+            align-self: center;
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+
+        .Card_interact_item {
+            // min-width: 4em;
+            // min-height: 4em;
+            background: none;
+            border: none;
+            border-radius: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+        
+            .fas.fa-share {
+                font-size: 1.5em;
+            }
+            
+            .fas.fa-save {
+                font-size: 1.5em;
+            }
+        
+            &:hover {
+                background-color: #ececec;
+                box-shadow: 0 0.1em 0.2em rgba(0,0,0,0.25), 0 0.1em 0.2em rgba(0,0,0,0.22);
+                transition: 0.2s ease-in-out;  
+            }
+        }
+    }
+
+    .Card_image {
+        width: 10em;
+        padding: 1em;
+    }
+
+    .Card_text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #ffffff;
+        border-radius: 0 0 0.5em 0.5em;
+        min-height: 3em;
+        padding: 1em;
+    
+        .Card_description {
+        background-color: #ffffff;
+        text-align: center;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 600;
+        font-size: 1em;
+        }
+    }
+
+    @keyframes cardDisplayed {
+        0% {
+            opacity: 0.5;
+            }
+        100% {
+            opacity: 1;
+            }
+    }
+}
+
+// .MenuBar {
+//     display: flex;
+//     justify-content: center;
+    
+//     .fas.fa-bars {
+//         font-size: 2.2em;
+//         color: #aec5d6;
+//     }
+// }
+
+.SearchBar {
+    height: 3em;
+    width: 3em;
+    border: none;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    background-color: #aec5d6;
+    transition: width 0.3s ease-out;
+    outline: none;
+    padding: 0;
+    margin: 0em 0em 1em auto;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    // Makes highlight invisible on chrome
+
+    .fas.fa-search {
+        font-size: 1.5em;
+        color: #223040;
+        padding: 0.5em;
+        cursor: pointer;
+        border-radius: 2em;
+        margin-left: auto;
+      }
+
+    .fas.fa-times {
+    font-size: 1.5em;
+    color: #223040;
+    opacity: 0;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 2em;
+    display: inherit;
+    margin-left: 0.1em;
+    animation-delay: 2s;
+    animation: closeIconOpen 0.4s forwards ease-out;
+    }
+
+    .SearchText {
+    font-family: "Quicksand", sans-serif;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    color: #223040;
+    visibility: hidden;
+    }
+
+    @keyframes closeIconOpen {
+        0% {
+            opacity: 0;
+            }
+        60% {
+            opacity: 0;
+            }
+        100% {
+            opacity: 1;
+            }
+    }
+
+    @keyframes closeIconClose {
+        0% {
+            opacity: 1;
+            }
+        100% {
+            opacity: 0;
+            }
+    }
+}
+
+.cardContent {
+    background-color: #101D29;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .fas.fa-arrow-left {
+        font-size: 1.7em;
+        color: white;
+        margin-right: auto;
+        padding: 0.75em 0.5em 0.75em 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fullCard {
+        background-color: white;
+        font-family: "Quicksand", sans-serif;
+        min-height: 10vh;
+        border-radius: 0.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8em 0.8em 1.3em 0.8em;
+        width: 85%;
+        margin: auto 0;
+
+        .cardContentImage {
+            margin-top: 1em;
+            width: 50vw;
+            user-select: none;
+
+        }
+
+        @keyframes showResults {
+            0% {
+                opacity: 0;
+                }
+            100% {
+                opacity: 1;
+                }
+        }
+    }
+}
+
+.userInputwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .allUserInput {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 1em;
+
+        .UserInput {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .inputLabel {
+                margin-bottom: 0.5em;
+                font-weight: 600;
+            }
+
+            .inputBox {
+                max-width: 4em;
+                min-height: 3.5em;
+                font-family: "Quicksand", sans-serif;
+                font-size: 1.1em;
+                text-align: center;
+                border-radius: 0.2em;
+                outline: none;
+                border: none;
+                // border: 0.1em solid rgba(0, 0, 0, 0.048);
+                background-color: rgba(0, 0, 0, 0.048);
+                
+
+                &:focus {
+                    box-shadow: 0 0 0 0.1em rgba(0, 0, 255, 0.5);
+                }
+            }
+        }
+    }
+    .calculateButton {
+        margin-top: 1em;
+        width: 7em;
+        height: 2.5em;
+        background: none;
+        border: none;
+        outline: none;
+        background: linear-gradient(180deg, rgba(0,255,0,1) 0%, rgb(0, 206, 0) 100%);
+        color: white;
+        border-radius: 5em;
+        font-size: 1.3em;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 600;
+        box-shadow: 0px 0px 10px -7px rgba(0,0,0,0.75);
+        user-select: none;
+        } 
+}   
+
+.allOuput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+
+    .OutputText {
+        margin-top: 0.8em;
+        width: 12em;
+        font-size: 1.5em;
+        background: radial-gradient(circle, rgb(10, 10, 10) 0%, rgba(0,0,0,1) 100%);
+        color: white;
+        padding: 0.5em;
+        text-align: center;
+        border-radius: 0.2em;
+        // animation: showResults 1s forwards ease-out;
+    }
+
+    .stepsButton {
+        margin-top: 1em;
+        width: 7em;
+        height: 2.7em;
+        background: none;
+        border: none;
+        outline: none;
+        background: linear-gradient(180deg, rgba(255,255,0,1) 0%, rgb(236, 236, 0) 100%);
+        color: black;
+        border-radius: 5em;
+        font-size: 1.2em;
+        font-family: "Quicksand", sans-serif;
+        font-weight: 600;
+        vertical-align: middle;
+        box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.5)
+    }
+    
+    .allSteps {
+        
+        .divider {
+            align-self: center;
+            margin-top: 0.5em;
+            
+        }
+
+        .stepsTitles {
+            text-align: center;
+            margin-top: 0.2em;
+        
+            &.formula {
+                margin-top: 0.8em;
+            }
+        }
+
+        .stepsContent {
+            text-align: center;
+            margin-top: 0.1em;
+            max-width: 16em;
+        
+            &.numberedSteps {
+                margin-top: 0.3em;
+            }
+        }    
+    }
+}
+
+.noCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101D29;
+    min-height: 100vh;
+    
+    .noContent {
+        background-color: white;
+        font-family: "Quicksand", sans-serif;
+        height: 30vh;
+        width: 90vw;
+        border-radius: 0.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        .noContentTitle {
+            margin-bottom: 0.3em;
+        }
+
+        .noContentGoHome {
+            margin-top: 1em;
+            width: 7em;
+            height: 2.5em;
+            background: none;
+            border: none;
+            outline: none;
+            background: linear-gradient(180deg, rgba(0,0,255,1) 0%, rgb(0, 0, 206) 100%);
+            color: white;
+            border-radius: 5em;
+            font-size: 1.3em;
+            font-family: "Quicksand", sans-serif;
+            font-weight: 600;
+            box-shadow: 0px 0px 10px -7px rgba(0,0,0,0.75);
+            user-select: none;
+        }
+    }
+
+}
