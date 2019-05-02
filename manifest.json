@@ -3,13 +3,13 @@
   "name": "Cards App",
   "icons": [
     {
-      "src": "favicon",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "favicon.ico",
+      "sizes": "144x144 64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#4d004d",
-  "background_color": "#bfbfbf"
+  "theme_color": "#101D29",
+  "background_color": "#C8C8C8"
 }
