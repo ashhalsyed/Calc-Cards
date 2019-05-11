@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "43f485bab85548c81501",
+    "revision": "4a8a3c91a896fd6ef629",
     "url": "/Calc-Cards/static/css/main.63733540.chunk.css"
   },
   {
-    "revision": "43f485bab85548c81501",
-    "url": "/Calc-Cards/static/js/main.83264ba8.chunk.js"
+    "revision": "4a8a3c91a896fd6ef629",
+    "url": "/Calc-Cards/static/js/main.79edf8a1.chunk.js"
   },
   {
     "revision": "405ef092458f2a21fba4",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/Calc-Cards/static/media/Logo Black.741b0671.png"
   },
   {
-    "revision": "4b3feea572899c7f706072fbec6135ce",
+    "revision": "cc116b7fdfa08bca304b7446c082b252",
     "url": "/Calc-Cards/index.html"
   }
 ];
