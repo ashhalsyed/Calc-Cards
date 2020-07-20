@@ -1,0 +1,69 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "SAS Cosine Law",
+      "description": "Calculate the missing side when given two sides and an angle",
+      "image": "triangle",
+      "inputs": ["Side a", "Side b", "Angle C"],
+      "bounds": [
+        [0, "none"],
+        [0, "none"],
+        [0, 180]
+      ],
+      "steps": [
+        "Substitude side 'a', side 'b', and angle 'C' into given general equation for SAS",
+        "Simplify"
+      ],
+      "formula": "c = (a^2 + b^2 -2ab cosC)^(1/2)",
+      "resources": {
+        "SAS Worked Example": "https://www.youtube.com/watch?v=ZElOxG7_m3c"
+      }
+    },
+
+    {
+      "id": 2,
+      "title": "SSS Cosine Law",
+      "description": "Calculate the missing angle when given 3 sides",
+      "image": "triangle",
+      "inputs": ["Side a", "Side b", "Side c"],
+      "bounds": [
+        [0, "none"],
+        [0, "none"],
+        [0, "none"]
+      ],
+      "steps": [
+        "Substitude side 'a', side 'b', and side 'c' into given general equation for SSS",
+        "Simplify"
+      ],
+      "formula": "C = cos^(-1)((a^2+b^2-c^2)/(2ab))",
+      "resources": {
+        "SSS Worked Example": "https://www.youtube.com/watch?v=Ei54NnQ0FKs"
+      }
+    },
+
+    {
+      "id": 3,
+      "title": "Slope With Two Points",
+      "description": "Calculate slope given 2 points",
+      "image": "line",
+      "inputs": ["x1", "y1", "x2", "y2"],
+      "bounds": [
+        ["none", "none"],
+        ["none", "none"],
+        ["none", "none"],
+        ["none", "none"]
+      ],
+      "steps": [
+        "Calculate y2-y1 and set that as the numerator",
+        "Calculate x2-x1 and set that as the denominator",
+        "Simplify"
+      ],
+      "formula": "(y2-y1)/(x2-x1)",
+      "resources": {
+        "Calculate Slope With Two Points Worked Example": "https://www.youtube.com/watch?v=WkspBxrzuZo",
+        "Written Explanation": "https://www.mathwarehouse.com/algebra/linear_equation/slope-of-a-line.php"
+      }
+    }
+  ]
+}

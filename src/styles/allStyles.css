@@ -1,0 +1,1797 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* ::-moz-selection {
+  background: rgba(85, 153, 255, 0.8);
+  color: black;
+}
+
+* ::selection {
+  background: rgba(85, 153, 255, 0.8);
+  color: black;
+}
+
+html {
+  height: 100vh;
+  background-color: #101d29;
+}
+
+html body {
+  height: 100vh;
+}
+
+html body #root {
+  height: 100vh;
+}
+
+html body #root .App {
+  height: 100vh;
+}
+
+html body #root .App .ContentHolder {
+  background-color: #101d29;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+.HomeScreen {
+  background-color: #101d29;
+  padding: 0 1em 1em 1em;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.allCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.allCards .Card {
+  overflow: auto;
+  min-height: 15em;
+  width: 90vw;
+  max-width: 24em;
+  background-color: white;
+  margin: 0 0.5em 1em 0.5em;
+  border-radius: 0.5em;
+  word-wrap: break-word;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25), 0 0.25em 0.5em rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25), 0 0.25em 0.5em rgba(0, 0, 0, 0.22);
+  font-family: "Quicksand", sans-serif;
+}
+
+.allCards .Card .Card_Topbar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.allCards .Card .Card_Topbar .Card_title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5em auto 0 auto;
+}
+
+.allCards .Card .Card_Topbar .Card_interact_item {
+  width: 3.5em;
+  height: 3.5em;
+  background: none;
+  border: none;
+  border-radius: 100%;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.allCards .Card .Card_Topbar .Card_interact_item .fas.fa-trash {
+  font-size: 1.4em;
+}
+
+.allCards .Card .Card_Topbar .Card_interact_item .fas.fa-save {
+  font-size: 1.4em;
+}
+
+.allCards .Card .CardimageHolder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.allCards .Card .CardimageHolder .Card_image {
+  height: 8em;
+  width: 80%;
+  margin: 0.5em 0 0 0;
+}
+
+.allCards .Card .Card_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 0 0 0.5em 0.5em;
+  min-height: 3em;
+  padding: 1em;
+  color: #262626;
+}
+
+.allCards .Card .Card_text .Card_description {
+  background-color: #ffffff;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+@-webkit-keyframes cardDisplayed {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cardDisplayed {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.sideBarHolder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sideBarHolder .menuBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sideBarHolder .menuBar .fas.fa-bars {
+  font-size: 1.5em;
+  color: white;
+  padding: 0.5em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0.5em 0.5em 0.5em 0;
+}
+
+.sideBarHolder .backDrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.sideDrawer {
+  position: fixed;
+  width: 80vw;
+  max-width: 20em;
+  height: 150vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: white;
+  -webkit-box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.16);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.25, 0, 0, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0.25, 0, 0, 1);
+  transition: transform 0.3s cubic-bezier(0.25, 0, 0, 1);
+  transition: transform 0.3s cubic-bezier(0.25, 0, 0, 1), -webkit-transform 0.3s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.sideDrawer.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.sideDrawer .sideBarContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.sideDrawer .sideBarContent .sideBarHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #c8c8c8;
+}
+
+.sideDrawer .sideBarContent .sideBarHeader .sideBarLogo {
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0.875em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.sideDrawer .sideBarContent .sideBarLinkHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sideDrawer .sideBarContent .sideBarLinkHolder .sideBarLink {
+  text-decoration: none;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sideDrawer .sideBarContent .sideBarLinkHolder .sideBarLink .sideBarLinkText {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.sideDrawer .sideBarContent .sideBarLinkHolder .sideBarLink .fas.fa-square {
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.8);
+  -webkit-transform: scale(1, 1.25);
+          transform: scale(1, 1.25);
+  width: 2em;
+}
+
+.sideDrawer .sideBarContent .sideBarLinkHolder .sideBarLink .fas.fa-external-link-square-alt {
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.8);
+  width: 2em;
+}
+
+.sideDrawer .sideBarContent .sideBarLinkHolder .sideBarLink .fas.fa-plus {
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.8);
+  width: 2em;
+}
+
+.sideDrawer .sideBarContent .personalLogo {
+  height: 2em;
+  width: 2em;
+  margin: auto auto 51vh 0.5em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.sideDrawer .sideBarContent .personalLogo.rotated {
+  -webkit-animation: rotateLogo 1s ease-out;
+          animation: rotateLogo 1s ease-out;
+  cursor: auto;
+}
+
+@-webkit-keyframes rotateLogo {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateLogo {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.SearchBar {
+  position: absolute;
+  top: 0.8em;
+  right: 1em;
+  z-index: 8;
+  height: 3em;
+  width: 3em;
+  max-width: 20em;
+  border: none;
+  border-radius: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #aec5d6;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+  outline: none;
+  padding: 0;
+  margin-left: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.SearchBar .fas.fa-search {
+  font-size: 1.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.SearchBar .fas.fa-times {
+  font-size: 1.5em;
+  color: #223040;
+  opacity: 0;
+  padding: 0.5em;
+  cursor: pointer;
+  border-radius: 2em;
+  display: inherit;
+  margin-left: 0.1em;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation: closeIconOpen 0.4s forwards ease-out;
+          animation: closeIconOpen 0.4s forwards ease-out;
+}
+
+.SearchBar .SearchText {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  color: #223040;
+  visibility: hidden;
+}
+
+@-webkit-keyframes closeIconOpen {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closeIconOpen {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes closeIconClose {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes closeIconClose {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.cardContent {
+  background-color: #101d29;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.cardContent .fullCard {
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+  min-height: 10vh;
+  border-radius: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90vw;
+  max-width: 24em;
+  margin: 0 0.5em auto 0.5em;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.cardContent .fullCard.calculated {
+  margin: 0.5em 0.5em 1em 0.5em;
+}
+
+.cardContent .fullCard .cardContentTitle {
+  text-align: center;
+  margin-top: 0.5em;
+  max-width: 90%;
+  color: #262626;
+}
+
+.cardContent .fullCard .cardContentImage {
+  margin-top: 1em;
+  height: 11em;
+  width: 80%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@-webkit-keyframes showResults {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showResults {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.arrowHolder {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4.5em;
+  width: 100%;
+}
+
+.arrowHolder .arrowButton {
+  background: none;
+  border: none;
+  height: 100%;
+  padding: 0.5em 1em 0.5em 2em;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.arrowHolder .arrowButton .fas.fa-arrow-left {
+  font-size: 1.7em;
+  color: white;
+}
+
+.userInputwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.userInputwrapper .allUserInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  max-width: 90%;
+  margin-top: 1em;
+}
+
+.userInputwrapper .allUserInput .UserInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.2em;
+}
+
+.userInputwrapper .allUserInput .UserInput .inputLabel {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.userInputwrapper .allUserInput .UserInput .inputBox {
+  max-width: 3.2em;
+  min-height: 3.2em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1.3em;
+  text-align: center;
+  border-radius: 0.2em;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.048);
+}
+
+.userInputwrapper .allUserInput .UserInput .inputBox:focus {
+  -webkit-box-shadow: 0 0 0 0.08em #7e7e7e;
+          box-shadow: 0 0 0 0.08em #7e7e7e;
+}
+
+.userInputwrapper .inputButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.userInputwrapper .inputButtons .calculateButton {
+  width: 7em;
+  height: 2.5em;
+  background: none;
+  border: solid black 0.1em;
+  color: black;
+  border-radius: 5em;
+  font-size: 1.3em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  -webkit-box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.75);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin: 1em auto;
+}
+
+.userInputwrapper .inputButtons .clearButton {
+  height: 2em;
+  width: 2em;
+  background: none;
+  border: none;
+  color: black;
+  border-radius: 5em;
+  font-size: 1.4em;
+  font-family: "Quicksand", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin: 1em auto 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.userInputwrapper .inputButtons .clearButton .fas.fa-backspace {
+  margin-right: 0.1em;
+}
+
+.userInputwrapper .inputButtons .undoButton {
+  height: 2em;
+  width: 2em;
+  background: none;
+  border: none;
+  color: black;
+  border-radius: 5em;
+  font-size: 1.4em;
+  font-family: "Quicksand", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin: 1em auto 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.allOuput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  width: 100%;
+}
+
+.allOuput .OutputText {
+  max-width: 15em;
+  width: 70vw;
+  font-size: 1.3em;
+  background-color: rgba(0, 0, 0, 0.048);
+  color: black;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 0.2em;
+}
+
+.allOuput .stepsButton {
+  margin-top: 1em;
+  width: 7em;
+  height: 2.7em;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: #ffff64;
+  color: black;
+  border-radius: 1em 1em 0 0;
+  font-size: 1.2em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  vertical-align: middle;
+  z-index: 8;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.allOuput .allSteps {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #ffff64;
+  border-radius: 0 0 0.5em 0.5em;
+}
+
+.allOuput .allSteps s .divider {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 0.5em;
+}
+
+.allOuput .allSteps .stepsTitles {
+  text-align: center;
+  max-width: 80%;
+  margin-top: 1em;
+}
+
+.allOuput .allSteps .stepsTitles.formulaTitle {
+  margin-top: 0.5em;
+}
+
+.allOuput .allSteps .stepsContent {
+  text-align: center;
+  margin-top: 0.1em;
+  max-width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.allOuput .allSteps .stepsContent.numberedSteps {
+  margin-top: 0.3em;
+  list-style-type: none;
+  text-align: center;
+  margin-right: 0;
+}
+
+.allOuput .allSteps .stepsContent.answer {
+  margin-bottom: 1em;
+}
+
+.noCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #101d29;
+  min-height: 100vh;
+}
+
+.noCard .noContent {
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+  height: 30vh;
+  width: 90vw;
+  max-width: 20em;
+  border-radius: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.noCard .noContent .noContentTitle {
+  margin-bottom: 0.3em;
+}
+
+.noCard .noContent .noContentGoHome {
+  margin-top: 1em;
+  width: 7em;
+  height: 2.5em;
+  background: none;
+  border: solid blue 0.1em;
+  color: blue;
+  border-radius: 5em;
+  font-size: 1.3em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  -webkit-box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.75);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.savedCards {
+  background-color: #101d29;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.invisibleIcon {
+  width: 2.5em;
+  height: 2.5em;
+  background: none;
+  border: none;
+  border-radius: 100%;
+}
+
+.otherResources {
+  background-color: #101d29;
+  min-height: 100%;
+  min-height: 100%;
+}
+
+.otherResources .allResources {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 0 1em 0;
+}
+
+.otherResources .allResources .resource {
+  background-color: white;
+  border-radius: 0.75em;
+  width: 90vw;
+  max-width: 24em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0.5em 1em 0.5em;
+  cursor: pointer;
+}
+
+.otherResources .allResources .resource .TitleSection {
+  width: 100%;
+  min-height: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: gainsboro;
+  border-radius: 0.75em 0 0 0.75em;
+}
+
+.otherResources .allResources .resource .TitleSection .resourceTitle {
+  text-align: center;
+  color: black;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  cursor: auto;
+  padding: 0.5em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.otherResources .allResources .resource .TitleSection .resourceImage {
+  width: 80%;
+  height: 30vw;
+  max-height: 10em;
+}
+
+.otherResources .allResources .resource .ContentSection {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.otherResources .allResources .resource .ContentSection .displayedIcons {
+  height: 100%;
+}
+
+.fab.fa-youtube {
+  height: 100%;
+  font-size: 1.5em;
+  padding: 0 0.5em;
+  color: red;
+}
+
+.fas.fa-link {
+  height: 100%;
+  font-size: 1.2em;
+  padding: 0 0.5em;
+}
+
+.otherResourcesContent {
+  background-color: #101d29;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.otherResourcesContent .resourceContentTitle {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+}
+
+.otherResourcesContent .resourceContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.otherResourcesContent .resourceContent .youtubeEmbedVideo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1em;
+}
+
+.otherResourcesContent .resourceContent .youtubeEmbedVideo .specificResourceTitle {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.otherResourcesContent .resourceContent .resourceLinkHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.otherResourcesContent .resourceContent .resourceLinkHolder:hover {
+  text-decoration: underline;
+}
+
+.otherResourcesContent .resourceContent .resourceLinkHolder .resourceLink {
+  padding: 1em;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  font-family: "Quicksand", sans-serif;
+}
+
+.otherResourcesContent .resourceContent .resourceLinkHolder .fas.fa-external-link-alt {
+  font-size: 0.9em;
+  padding: 0 0 0 0.5em;
+  color: white;
+  margin-left: 0.2em;
+}
+
+.requestACard {
+  background-color: #101d29;
+  min-height: 100%;
+  padding: 0 0 1em 0;
+}
+
+.requestACard .requestCard {
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+  min-height: 10vh;
+  border-radius: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90vw;
+  max-width: 24em;
+  margin: 0 auto auto auto;
+}
+
+.requestACard .requestCard .titleInput {
+  width: 90%;
+  height: 2.5em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1.3em;
+  text-align: center;
+  border-radius: 0.2em;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.048);
+  margin-top: 1em;
+}
+
+.requestACard .requestCard .titleInput:focus {
+  -webkit-box-shadow: 0 0 0 0.08em #7e7e7e;
+          box-shadow: 0 0 0 0.08em #7e7e7e;
+}
+
+.requestACard .requestCard .descriptionInput {
+  width: 80%;
+  height: 5em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 0.2em;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.048);
+  margin-top: 1em;
+}
+
+.requestACard .requestCard .descriptionInput:focus {
+  -webkit-box-shadow: 0 0 0 0.08em #7e7e7e;
+          box-shadow: 0 0 0 0.08em #7e7e7e;
+}
+
+.requestACard .requestCard .previewImage {
+  width: 15em;
+  height: 15em;
+  margin-top: 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.requestACard .requestCard .dropDownHolder {
+  background-color: gainsboro;
+  width: 8em;
+  height: 2em;
+  margin-top: 1em;
+  font-size: 1em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+}
+
+.requestACard .requestCard .allInputBoxHolder {
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.requestACard .requestCard .allInputBoxHolder .specificInputBoxHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4em;
+  margin: 0.5em;
+}
+
+.requestACard .requestCard .allInputBoxHolder .specificInputBoxHolder .iconPlaceHolder {
+  width: 30%;
+  height: 100%;
+}
+
+.requestACard .requestCard .allInputBoxHolder .specificInputBoxHolder .inputBox {
+  width: 100%;
+  height: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 0.2em;
+  background: none;
+  background-color: rgba(0, 0, 0, 0.048);
+}
+
+.requestACard .requestCard .allInputBoxHolder .specificInputBoxHolder .inputBox:focus {
+  -webkit-box-shadow: 0 0 0 0.08em #7e7e7e;
+          box-shadow: 0 0 0 0.08em #7e7e7e;
+}
+
+.requestACard .requestCard .allInputBoxHolder .specificInputBoxHolder .fas.fa-times {
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.requestACard .requestCard .allInputBoxHolder .addInputButton {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  height: 6em;
+  width: 6em;
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.requestACard .requestCard .allInputBoxHolder .addInputButton .fas.fa-plus {
+  font-size: 2em;
+}
+
+.requestACard .requestCard .allInputBoxHolder .addInputButton .addInputText {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  margin-top: 0.5em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+}
+
+.requestACard .requestCard .formulaInput {
+  width: 80%;
+  min-height: 2.5em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1.3em;
+  text-align: center;
+  word-wrap: wrap;
+  border-radius: 0.2em;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.048);
+  margin-top: 0.5em;
+}
+
+.requestACard .requestCard .formulaInput:focus {
+  -webkit-box-shadow: 0 0 0 0.08em #7e7e7e;
+          box-shadow: 0 0 0 0.08em #7e7e7e;
+}
+
+.requestACard .requestCard .allStepsHolder {
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.requestACard .requestCard .allStepsHolder .specificStepHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4em;
+  margin: 0.5em;
+}
+
+.requestACard .requestCard .allStepsHolder .specificStepHolder .iconPlaceHolder {
+  width: 30%;
+  height: 100%;
+}
+
+.requestACard .requestCard .allStepsHolder .specificStepHolder .step {
+  width: 100%;
+  height: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 0.2em;
+  background: none;
+  background-color: rgba(0, 0, 0, 0.048);
+}
+
+.requestACard .requestCard .allStepsHolder .specificStepHolder .step:focus {
+  -webkit-box-shadow: 0 0 0 0.08em #7e7e7e;
+          box-shadow: 0 0 0 0.08em #7e7e7e;
+}
+
+.requestACard .requestCard .allStepsHolder .specificStepHolder .fas.fa-times {
+  width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.requestACard .requestCard .allStepsHolder .addStepsButton {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  height: 6em;
+  width: 6em;
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+.requestACard .requestCard .allStepsHolder .addStepsButton .fas.fa-plus {
+  font-size: 2em;
+}
+
+.requestACard .requestCard .allStepsHolder .addStepsButton .addStepText {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  margin-top: 0.5em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+}
+
+.requestACard .SubmitCardButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1em auto 0 auto;
+  width: 15em;
+  height: 4em;
+  border-radius: 5em;
+  background: none;
+  border: solid white 0.1em;
+  color: white;
+  cursor: pointer;
+}
+
+.requestACard .SubmitCardButton .SubmitCardText {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.requestACard .SubmitCardButton .fas.fa-paper-plane {
+  font-size: 1.1em;
+  margin-left: 1em;
+  color: white;
+}
+
+.PageTitle {
+  font-size: 1.4em;
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "Quicksand", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.featureComingSoon {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 1.2em;
+  font-family: "Quicksand", sans-serif;
+}
+
+.previewButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0.75em;
+  right: 1.5em;
+  width: 4em;
+  height: 4em;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.previewButton .fas.fa-eye {
+  font-size: 1.8em;
+  color: white;
+}
+
+.previewCard {
+  background-color: #101d29;
+  min-height: 100%;
+  padding: 0 0 1em 0;
+}
+
+.previewCard .previewCardTitle {
+  color: white;
+  font-size: 1.3em;
+  text-decoration: underline;
+  margin: 0.5em auto 0.5em auto;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
+}
+
+.previewCard .nopreviewCard {
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+  height: 30vh;
+  width: 90vw;
+  max-width: 20em;
+  border-radius: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.previewCard .nopreviewCard .nopreviewCardTitle {
+  margin-bottom: 0.3em;
+}
+
+.previewCard .nopreviewCard .requestACard {
+  margin-top: 1em;
+  width: 7em;
+  height: 2.5em;
+  background: none;
+  border: solid blue 0.1em;
+  color: blue;
+  border-radius: 5em;
+  font-size: 1.3em;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  -webkit-box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.75);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.previewCard .Card {
+  min-height: 15em;
+  width: 90vw;
+  max-width: 24em;
+  background-color: white;
+  margin: 0 auto 1em auto;
+  border-radius: 0.5em;
+  word-wrap: break-word;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25), 0 0.25em 0.5em rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25), 0 0.25em 0.5em rgba(0, 0, 0, 0.22);
+  font-family: "Quicksand", sans-serif;
+}
+
+.previewCard .Card .Card_Topbar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.previewCard .Card .Card_Topbar .Card_title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5em auto 0 auto;
+}
+
+.previewCard .Card .Card_Topbar .Card_interact_item {
+  width: 3.5em;
+  height: 3.5em;
+  background: none;
+  border: none;
+  border-radius: 100%;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.previewCard .Card .Card_Topbar .Card_interact_item .fas.fa-trash {
+  font-size: 1.4em;
+}
+
+.previewCard .Card .Card_Topbar .Card_interact_item .fas.fa-save {
+  font-size: 1.4em;
+}
+
+.previewCard .Card .CardimageHolder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.previewCard .Card .CardimageHolder .Card_image {
+  height: 8em;
+  width: 80%;
+  margin: 0.5em 0 0 0;
+  cursor: pointer;
+}
+
+.previewCard .Card .Card_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 0 0 0.5em 0.5em;
+  min-height: 3em;
+  padding: 1em;
+  color: #262626;
+}
+
+.previewCard .Card .Card_text .Card_description {
+  background-color: #ffffff;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+@keyframes cardDisplayed {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.previewCard .fullCard {
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+  min-height: 10vh;
+  border-radius: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90vw;
+  max-width: 24em;
+  margin: 0 auto auto auto;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.previewCard .fullCard.calculated {
+  margin: 0.5em 0.5em 1em 0.5em;
+}
+
+.previewCard .fullCard .cardContentTitle {
+  text-align: center;
+  margin-top: 0.5em;
+  max-width: 90%;
+  color: #262626;
+}
+
+.previewCard .fullCard .cardContentImage {
+  margin-top: 1em;
+  height: 11em;
+  width: 80%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@keyframes showResults {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.myAnimation-enter {
+  opacity: 0.5;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.myAnimation-enter-active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
+.myAnimation-enter-done {
+  opacity: 1;
+}
+
+.myAnimation-exit {
+  opacity: 1;
+}
+
+.myAnimation-exit-active {
+  opacity: 0;
+  -webkit-transition: opacity 0ms;
+  transition: opacity 0ms;
+}
+
+.myAnimation-exit-done {
+  opacity: 0;
+}
+/*# sourceMappingURL=allStyles.css.map */

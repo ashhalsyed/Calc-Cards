@@ -1,0 +1,13 @@
+{
+    "images": {
+        "": "https://raw.githubusercontent.com/ashhalsyed/Calc-Cards-Beta/master/src/Card%20Data/Card%20Images/noImage.svg?sanitize=true",
+        "triangle": "https://raw.githubusercontent.com/ashhalsyed/Calc-Cards-Beta/master/src/Card%20Data/Card%20Images/triangle.svg?sanitize=true",
+        "line": "https://raw.githubusercontent.com/ashhalsyed/Calc-Cards-Beta/master/src/Card%20Data/Card%20Images/line.svg?sanitize=true",
+        "rectangle": "https://raw.githubusercontent.com/ashhalsyed/Calc-Cards-Beta/master/src/Card%20Data/Card%20Images/rectangle.svg?sanitize=true",
+        "square": "https://raw.githubusercontent.com/ashhalsyed/Calc-Cards-Beta/master/src/Card%20Data/Card%20Images/square.svg?sanitize=true",
+        "circle": "https://raw.githubusercontent.com/ashhalsyed/Calc-Cards-Beta/master/src/Card%20Data/Card%20Images/circle.svg?sanitize=true",
+        "cube": "https://raw.githubusercontent.com/ashhalsyed/Calc-Cards-Beta/master/src/Card%20Data/Card%20Images/cube.svg?sanitize=true",
+        "cylinder": "https://raw.githubusercontent.com/ashhalsyed/Calc-Cards-Beta/master/src/Card%20Data/Card%20Images/cylinder.svg?sanitize=true",
+        "sphere": "https://raw.githubusercontent.com/ashhalsyed/Calc-Cards-Beta/master/src/Card%20Data/Card%20Images/sphere.svg?sanitize=true"
+    }
+}

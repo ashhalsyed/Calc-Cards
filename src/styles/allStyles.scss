@@ -1,0 +1,1388 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
+* {
+	margin: 0;
+	padding: 0;
+	::selection {
+		background: rgba(85, 153, 255, 0.8);
+		color: black;
+	}
+}
+
+html {
+	height: 100vh;
+	background-color: #101d29;
+
+	body {
+		height: 100vh;
+
+		#root {
+			height: 100vh;
+
+			.App {
+				height: 100vh;
+
+				.ContentHolder {
+					background-color: #101d29;
+					min-height: 100vh;
+					min-width: 100vh;
+				}
+			}
+		}
+	}
+}
+
+.HomeScreen {
+	background-color: #101d29;
+	padding: 0 1em 1em 1em;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.allCards {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+
+	.Card {
+		overflow: auto;
+		min-height: 15em;
+		width: 90vw;
+		max-width: 24em;
+		background-color: white;
+		margin: 0 0.5em 1em 0.5em;
+		border-radius: 0.5em;
+		word-wrap: break-word;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25),
+			0 0.25em 0.5em rgba(0, 0, 0, 0.22);
+		font-family: "Quicksand", sans-serif;
+
+		.Card_Topbar {
+			width: 100%;
+			display: flex;
+			// justify-content: space-around;
+			// height: 3em;
+
+			.Card_title {
+				text-align: center;
+				font-weight: 600;
+				font-size: 1.3em;
+				display: flex;
+				align-items: center;
+				margin: 0.5em auto 0 auto;
+			}
+
+			.Card_interact_item {
+				width: 3.5em;
+				height: 3.5em;
+				background: none;
+				border: none;
+				border-radius: 100%;
+				padding: 1em;
+				cursor: pointer;
+
+				.fas.fa-trash {
+					font-size: 1.4em;
+				}
+
+				.fas.fa-save {
+					font-size: 1.4em;
+				}
+			}
+		}
+
+		.CardimageHolder {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			cursor: pointer;
+			user-select: none;
+
+			.Card_image {
+				height: 8em;
+				width: 80%;
+				margin: 0.5em 0 0 0;
+				// cursor: pointer;
+			}
+		}
+
+		.Card_text {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background-color: #ffffff;
+			border-radius: 0 0 0.5em 0.5em;
+			min-height: 3em;
+			padding: 1em;
+			color: #262626;
+
+			.Card_description {
+				background-color: #ffffff;
+				text-align: center;
+				font-family: "Quicksand", sans-serif;
+				font-weight: 600;
+				font-size: 1em;
+			}
+		}
+
+		@keyframes cardDisplayed {
+			0% {
+				opacity: 0.5;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.sideBarHolder {
+	width: 100%;
+	display: flex;
+	//Holder Only
+
+	.menuBar {
+		display: flex;
+		justify-content: center;
+
+		.fas.fa-bars {
+			font-size: 1.5em;
+			color: white;
+			padding: 0.5em;
+			cursor: pointer;
+			user-select: none;
+			margin: 0.5em 0.5em 0.5em 0;
+		}
+	}
+
+	.backDrop {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.5);
+		top: 0;
+		left: 0;
+		z-index: 9;
+	}
+}
+
+.sideDrawer {
+	position: fixed;
+	width: 80vw;
+	max-width: 20em;
+	// height: 100vh;
+	height: 150vh;
+	flex: 1;
+	background-color: white;
+	box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.16);
+	top: 0;
+	left: 0;
+	z-index: 10;
+	transform: translateX(-110%);
+	transition: transform 0.3s cubic-bezier(0.25, 0, 0, 1);
+
+	&.open {
+		transform: translateX(0);
+	}
+
+	.sideBarContent {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		.sideBarHeader {
+			display: flex;
+			align-items: center;
+			background-color: rgb(200, 200, 200);
+
+			.sideBarLogo {
+				width: 2.5em;
+				height: 2.5em;
+				padding: 0.875em;
+				user-select: none;
+			}
+		}
+
+		.sideBarLinkHolder {
+			display: flex;
+			flex-direction: column;
+
+			.sideBarLink {
+				text-decoration: none;
+				padding: 1em;
+				display: flex;
+				align-items: center;
+
+				.sideBarLinkText {
+					font-family: "Quicksand", sans-serif;
+					font-weight: 600;
+					text-decoration: none;
+					color: black;
+					font-size: 1em;
+					user-select: none;
+				}
+
+				.fas.fa-square {
+					font-size: 1em;
+					color: rgba(0, 0, 0, 0.8);
+					transform: scale(1, 1.25);
+					width: 2em;
+				}
+
+				.fas.fa-external-link-square-alt {
+					font-size: 1em;
+					color: rgba(0, 0, 0, 0.8);
+					width: 2em;
+				}
+
+				.fas.fa-plus {
+					font-size: 1em;
+					color: rgba(0, 0, 0, 0.8);
+					width: 2em;
+				}
+			}
+		}
+
+		.personalLogo {
+			height: 2em;
+			width: 2em;
+			margin: auto auto 51vh 0.5em;
+			cursor: pointer;
+			user-select: none;
+
+			&.rotated {
+				animation: rotateLogo 1s ease-out;
+				cursor: auto;
+			}
+		}
+	}
+
+	@keyframes rotateLogo {
+		from {
+			transform: rotate(0deg);
+		}
+
+		to {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+.SearchBar {
+	position: absolute;
+	top: 0.8em;
+	right: 1em;
+	z-index: 8;
+	height: 3em;
+	width: 3em;
+	max-width: 20em;
+	border: none;
+	border-radius: 2em;
+	display: flex;
+	align-items: center;
+	background-color: #aec5d6;
+	transition: width 0.3s ease-out;
+	outline: none;
+	padding: 0;
+	margin-left: auto;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	// Makes highlight invisible on chrome
+
+	.fas.fa-search {
+		font-size: 1.5em;
+		padding: 0.5em;
+		cursor: pointer;
+		margin-left: auto;
+	}
+
+	.fas.fa-times {
+		font-size: 1.5em;
+		color: #223040;
+		opacity: 0;
+		padding: 0.5em;
+		cursor: pointer;
+		border-radius: 2em;
+		display: inherit;
+		margin-left: 0.1em;
+		animation-delay: 2s;
+		animation: closeIconOpen 0.4s forwards ease-out;
+	}
+
+	.SearchText {
+		font-family: "Quicksand", sans-serif;
+		width: 100%;
+		font-size: 1.2em;
+		font-weight: 600;
+		padding: 0;
+		border: none;
+		outline: none;
+		background: none;
+		color: #223040;
+		visibility: hidden;
+	}
+
+	@keyframes closeIconOpen {
+		0% {
+			opacity: 0;
+		}
+		60% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes closeIconClose {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+}
+
+.cardContent {
+	background-color: #101d29;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+
+	.fullCard {
+		background-color: white;
+		font-family: "Quicksand", sans-serif;
+		min-height: 10vh;
+		border-radius: 0.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// padding: 0.8em 0.8em 1.3em 0.8em;
+		width: 90vw;
+		max-width: 24em;
+		margin: 0 0.5em auto 0.5em;
+		transition: transform 0.2s ease;
+
+		&.calculated {
+			margin: 0.5em 0.5em 1em 0.5em;
+		}
+
+		.cardContentTitle {
+			text-align: center;
+			margin-top: 0.5em;
+			max-width: 90%;
+			color: #262626;
+			// color: black;
+		}
+
+		.cardContentImage {
+			margin-top: 1em;
+			height: 11em;
+			width: 80%;
+			user-select: none;
+		}
+
+		@keyframes showResults {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.arrowHolder {
+	align-items: center;
+	display: flex;
+	height: 4.5em;
+	width: 100%;
+
+	.arrowButton {
+		background: none;
+		border: none;
+		height: 100%;
+		padding: 0.5em 1em 0.5em 2em;
+		margin-right: auto;
+		cursor: pointer;
+
+		.fas.fa-arrow-left {
+			font-size: 1.7em;
+			color: white;
+			// margin-right: auto;
+			// cursor: pointer;
+		}
+	}
+}
+
+.userInputwrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+	.allUserInput {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 90%;
+		margin-top: 1em;
+
+		.UserInput {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0.2em;
+
+			.inputLabel {
+				margin-bottom: 0.5em;
+				font-weight: 600;
+			}
+
+			.inputBox {
+				max-width: 3.2em;
+				min-height: 3.2em;
+				font-family: "Quicksand", sans-serif;
+				font-weight: 600;
+				font-size: 1.3em;
+				text-align: center;
+				border-radius: 0.2em;
+				outline: none;
+				border: none;
+				// border: 0.1em solid rgba(0, 0, 0, 0.048);
+				background-color: rgba(0, 0, 0, 0.048);
+
+				&:focus {
+					box-shadow: 0 0 0 0.08em rgb(126, 126, 126);
+				}
+			}
+		}
+	}
+
+	.inputButtons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+
+		.calculateButton {
+			width: 7em;
+			height: 2.5em;
+			background: none;
+			border: solid black 0.1em;
+			color: black;
+			border-radius: 5em;
+			font-size: 1.3em;
+			font-family: "Quicksand", sans-serif;
+			font-weight: 600;
+			box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.75);
+			user-select: none;
+			cursor: pointer;
+			margin: 1em auto;
+		}
+
+		.clearButton {
+			height: 2em;
+			width: 2em;
+			background: none;
+			// border: solid black 0.1em;
+			border: none;
+			color: black;
+			border-radius: 5em;
+			font-size: 1.4em;
+			font-family: "Quicksand", sans-serif;
+			user-select: none;
+			cursor: pointer;
+			margin: 1em auto 1em 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.fas.fa-backspace {
+				margin-right: 0.1em;
+			}
+		}
+
+		.undoButton {
+			height: 2em;
+			width: 2em;
+			background: none;
+			// border: solid black 0.1em;
+			border: none;
+			color: black;
+			border-radius: 5em;
+			font-size: 1.4em;
+			font-family: "Quicksand", sans-serif;
+			user-select: none;
+			cursor: pointer;
+			margin: 1em auto 1em 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+.allOuput {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	visibility: hidden;
+	width: 100%;
+
+	.OutputText {
+		max-width: 15em;
+		width: 70vw;
+		font-size: 1.3em;
+		background-color: rgba(0, 0, 0, 0.048);
+		color: black;
+		padding: 0.5em;
+		text-align: center;
+		border-radius: 0.2em;
+		// animation: showResults 1s forwards ease-out;
+	}
+
+	.stepsButton {
+		margin-top: 1em;
+		width: 7em;
+		height: 2.7em;
+		background: none;
+		border: none;
+		outline: none;
+		// background: linear-gradient(180deg, rgba(255,255,0,1) 0%, rgb(236, 236, 0) 100%);
+		background-color: rgb(255, 255, 100);
+		// border: solid yellow 0.1em;
+		color: black;
+		border-radius: 1em 1em 0 0;
+		font-size: 1.2em;
+		font-family: "Quicksand", sans-serif;
+		font-weight: 600;
+		vertical-align: middle;
+		z-index: 8;
+		cursor: pointer;
+		user-select: none;
+	}
+
+	.allSteps {
+		align-items: center;
+		width: 100%;
+		// margin-bottom: 1em;
+		background-color: rgba(255, 255, 100, 1);
+		// box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.5);
+		// border: solid yellow 0.1em;
+		border-radius: 0 0 0.5em 0.5em;
+		s .divider {
+			align-self: center;
+			margin-top: 0.5em;
+		}
+
+		.stepsTitles {
+			text-align: center;
+			max-width: 80%;
+			margin-top: 1em;
+
+			&.formulaTitle {
+				margin-top: 0.5em;
+			}
+		}
+
+		.stepsContent {
+			text-align: center;
+			margin-top: 0.1em;
+			max-width: 90%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&.numberedSteps {
+				margin-top: 0.3em;
+				list-style-type: none;
+				text-align: center;
+				margin-right: 0;
+			}
+
+			&.answer {
+				margin-bottom: 1em;
+			}
+		}
+	}
+}
+
+.noCard {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #101d29;
+	min-height: 100vh;
+
+	.noContent {
+		background-color: white;
+		font-family: "Quicksand", sans-serif;
+		height: 30vh;
+		width: 90vw;
+		max-width: 20em;
+		border-radius: 0.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.noContentTitle {
+			margin-bottom: 0.3em;
+		}
+
+		.noContentGoHome {
+			margin-top: 1em;
+			width: 7em;
+			height: 2.5em;
+			background: none;
+			border: solid blue 0.1em;
+			// background: linear-gradient(180deg, rgba(0,0,255,1) 0%, rgb(0, 0, 206) 100%);
+			color: blue;
+			border-radius: 5em;
+			font-size: 1.3em;
+			font-family: "Quicksand", sans-serif;
+			font-weight: 600;
+			box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.75);
+			user-select: none;
+			cursor: pointer;
+		}
+	}
+}
+
+.savedCards {
+	background-color: #101d29;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.invisibleIcon {
+	width: 2.5em;
+	height: 2.5em;
+	background: none;
+	border: none;
+	border-radius: 100%;
+}
+
+.otherResources {
+	background-color: #101d29;
+	min-height: 100%;
+	min-height: 100%;
+
+	.allResources {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding: 0 0 1em 0;
+
+		.resource {
+			background-color: white;
+			border-radius: 0.75em;
+			width: 90vw;
+			max-width: 24em;
+			display: flex;
+			align-items: center;
+			margin: 0 0.5em 1em 0.5em;
+			cursor: pointer;
+
+			.TitleSection {
+				width: 100%;
+				min-height: 4em;
+				display: flex;
+				flex-direction: column;
+				background-color: rgb(220, 220, 220);
+				border-radius: 0.75em 0 0 0.75em;
+
+				.resourceTitle {
+					text-align: center;
+					color: black;
+					font-family: "Quicksand", sans-serif;
+					font-size: 1em;
+					cursor: auto;
+					padding: 0.5em;
+					flex: 1;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				.resourceImage {
+					width: 80%;
+					height: 30vw;
+					max-height: 10em;
+				}
+			}
+
+			.ContentSection {
+				// background-color: rgb(220, 220, 220);
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				.displayedIcons {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+.fab.fa-youtube {
+	height: 100%;
+	font-size: 1.5em;
+	padding: 0 0.5em;
+	color: red;
+}
+
+.fas.fa-link {
+	height: 100%;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+}
+
+.otherResourcesContent {
+	background-color: #101d29;
+	min-height: 100%;
+	min-width: 100%;
+
+	.resourceContentTitle {
+		color: white;
+		font-family: "Quicksand", sans-serif;
+		text-align: center;
+	}
+
+	.resourceContent {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// height: 100%;
+
+		.youtubeEmbedVideo {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 1em;
+
+			.specificResourceTitle {
+				color: white;
+				font-family: "Quicksand", sans-serif;
+				font-size: 1em;
+				margin: 1em 0;
+				// text-decoration: underline;
+				text-align: center;
+			}
+		}
+
+		.resourceLinkHolder {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			.resourceLink {
+				padding: 1em;
+				text-decoration: none;
+				color: white;
+				font-size: 1.1em;
+				font-family: "Quicksand", sans-serif;
+			}
+
+			.fas.fa-external-link-alt {
+				font-size: 0.9em;
+				padding: 0 0 0 0.5em;
+				color: white;
+				margin-left: 0.2em;
+			}
+		}
+	}
+}
+
+.requestACard {
+	background-color: #101d29;
+	min-height: 100%;
+	padding: 0 0 1em 0;
+
+	.requestCard {
+		background-color: white;
+		font-family: "Quicksand", sans-serif;
+		min-height: 10vh;
+		border-radius: 0.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 90vw;
+		max-width: 24em;
+		margin: 0 auto auto auto;
+
+		.titleInput {
+			width: 90%;
+			height: 2.5em;
+			font-family: "Quicksand", sans-serif;
+			font-weight: 600;
+			font-size: 1.3em;
+			text-align: center;
+			border-radius: 0.2em;
+			outline: none;
+			border: none;
+			background-color: rgba(0, 0, 0, 0.048);
+			margin-top: 1em;
+
+			&:focus {
+				box-shadow: 0 0 0 0.08em rgb(126, 126, 126);
+			}
+		}
+
+		.descriptionInput {
+			width: 80%;
+			height: 5em;
+			font-family: "Quicksand", sans-serif;
+			font-weight: 600;
+			font-size: 1em;
+			text-align: center;
+			border-radius: 0.2em;
+			outline: none;
+			border: none;
+			background-color: rgba(0, 0, 0, 0.048);
+			margin-top: 1em;
+
+			&:focus {
+				box-shadow: 0 0 0 0.08em rgb(126, 126, 126);
+			}
+		}
+
+		.previewImage {
+			width: 15em;
+			height: 15em;
+			// border: solid red 0.1em;
+			margin-top: 1em;
+			user-select: none;
+		}
+
+		.dropDownHolder {
+			background-color: rgb(220,220,220);
+			width: 8em;
+			height: 2em;
+			margin-top: 1em;
+			font-size: 1em;
+			font-family: "Quicksand", sans-serif;
+			font-weight: 600;	
+		}
+
+		.allInputBoxHolder {
+			margin-top: 1em;
+			display: flex;
+			flex-direction: column;
+			width: 90%;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			.specificInputBoxHolder {
+				display: flex;
+				align-items: center;
+				height: 4em;
+				margin: 0.5em;
+
+				.iconPlaceHolder {
+					width: 30%;
+					height: 100%;
+				}
+
+				.inputBox {
+					width: 100%;
+					height: 100%;
+					font-family: "Quicksand", sans-serif;
+					font-weight: 600;
+					font-size:1em;
+					text-align: center;
+					outline: none;
+					border: none;
+					border-radius: 0.2em;
+					background: none;
+					background-color: rgba(0, 0, 0, 0.048);
+
+				&:focus {
+					box-shadow: 0 0 0 0.08em rgb(126, 126, 126);
+				}
+				}	
+
+				.fas.fa-times {
+					width: 30%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					cursor: pointer;
+				}
+			}
+
+			.addInputButton {
+				margin: 0.5em 0;
+				padding: 0.5em;
+				height: 6em;
+				width: 6em;
+				background: none;
+				border: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				cursor: pointer;
+				user-select: none;
+
+
+				.fas.fa-plus {
+					font-size: 2em;
+					// margin: 0.5em 0.5em 0 0.5em; 
+				}
+
+				.addInputText {
+					font-family: "Quicksand", sans-serif;
+					font-weight: 600;
+					font-size:1em;
+					margin-top: 0.5em;
+					user-select: none;
+					text-align: center;
+				}
+			}
+		}
+		
+		.formulaInput {
+			width: 80%;
+			min-height: 2.5em;
+			font-family: "Quicksand", sans-serif;
+			font-weight: 600;
+			font-size: 1.3em;
+			text-align: center;
+			word-wrap: wrap;
+			border-radius: 0.2em;
+			outline: none;
+			border: none;
+			background-color: rgba(0, 0, 0, 0.048);
+			margin-top: 0.5em;
+
+			&:focus {
+				box-shadow: 0 0 0 0.08em rgb(126, 126, 126);
+			}
+		}
+
+		.allStepsHolder {
+			margin-top: 1em;
+			display: flex;
+			flex-direction: column;
+			width: 90%;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			.specificStepHolder {
+				display: flex;
+				align-items: center;
+				height: 4em;
+				margin: 0.5em;
+
+				.iconPlaceHolder {
+					width: 30%;
+					height: 100%;
+				}
+
+				.step {
+					width: 100%;
+					height: 100%;
+					font-family: "Quicksand", sans-serif;
+					font-weight: 600;
+					font-size:1em;
+					text-align: center;
+					outline: none;
+					border: none;
+					border-radius: 0.2em;
+					background: none;
+					background-color: rgba(0, 0, 0, 0.048);
+
+				&:focus {
+					box-shadow: 0 0 0 0.08em rgb(126, 126, 126);
+				}
+				}	
+
+				.fas.fa-times {
+					width: 30%;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					cursor: pointer;
+				}
+			}
+
+			.addStepsButton {
+				margin: 0.5em 0;
+				padding: 0.5em;
+				height: 6em;
+				width: 6em;
+				background: none;
+				border: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				cursor: pointer;
+
+
+				.fas.fa-plus {
+					font-size: 2em;
+					// margin: 0.5em 0.5em 0 0.5em; 
+				}
+
+				.addStepText {
+					font-family: "Quicksand", sans-serif;
+					font-weight: 600;
+					font-size:1em;
+					margin-top: 0.5em;
+					user-select: none;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.SubmitCardButton {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 1em auto 0 auto;
+		width: 15em;
+		height: 4em;
+		border-radius: 5em;
+		background: none;
+		border: solid white 0.1em;
+		color: white;
+		cursor: pointer;
+
+
+		.SubmitCardText {
+			font-family: "Quicksand", sans-serif;
+			font-weight: 600;
+			font-size:1.5em;
+		}
+
+		.fas.fa-paper-plane {
+			font-size:1.1em;
+			margin-left: 1em;
+			color: white;
+		}
+
+	}
+}
+
+.PageTitle {
+	font-size: 1.4em;
+	color: white;
+	text-align: center;
+	// width: 100%;
+	margin-top: 1em;
+	position: absolute;
+	top: 0;
+	// right: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	//mega hack to center align absolute div
+	font-family: "Quicksand", sans-serif;
+	user-select: none;
+}
+
+.featureComingSoon {
+	text-align: center;
+	margin-top: 1em;
+	font-size: 1.2em;
+	font-family: "Quicksand", sans-serif;
+}
+
+.previewButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0.75em;
+	right: 1.5em;
+	width: 4em;
+	height: 4em;
+	background: none;
+	border: none;
+	cursor: pointer;
+
+	.fas.fa-eye {
+		font-size: 1.8em;
+		color: white;
+	}
+}
+
+.previewCard {
+	background-color: #101d29;
+	min-height: 100%;
+	padding: 0 0 1em 0;
+
+	.previewCardTitle {
+		color: white;
+		font-size: 1.3em;
+		text-decoration: underline;
+		margin: 0.5em auto 0.5em auto;
+		text-align: center;
+		font-weight: 600;
+		font-family: "Quicksand", sans-serif;
+
+	}
+
+	.nopreviewCard {
+		background-color: white;
+		font-family: "Quicksand", sans-serif;
+		height: 30vh;
+		width: 90vw;
+		max-width: 20em;
+		border-radius: 0.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+
+		.nopreviewCardTitle {
+			margin-bottom: 0.3em;
+		}
+
+		.requestACard {
+			margin-top: 1em;
+			width: 7em;
+			height: 2.5em;
+			background: none;
+			border: solid blue 0.1em;
+			// background: linear-gradient(180deg, rgba(0,0,255,1) 0%, rgb(0, 0, 206) 100%);
+			color: blue;
+			border-radius: 5em;
+			font-size: 1.3em;
+			font-family: "Quicksand", sans-serif;
+			font-weight: 600;
+			box-shadow: 0px 0px 10px -7px rgba(0, 0, 0, 0.75);
+			user-select: none;
+			cursor: pointer;
+		}
+	}
+
+	.Card {
+		min-height: 15em;
+		width: 90vw;
+		max-width: 24em;
+		background-color: white;
+		margin: 0 auto 1em auto;
+		border-radius: 0.5em;
+		word-wrap: break-word;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.25),
+			0 0.25em 0.5em rgba(0, 0, 0, 0.22);
+		font-family: "Quicksand", sans-serif;
+
+		.Card_Topbar {
+			width: 100%;
+			display: flex;
+			// justify-content: space-around;
+			// height: 3em;
+
+			.Card_title {
+				text-align: center;
+				font-weight: 600;
+				font-size: 1.3em;
+				display: flex;
+				align-items: center;
+				margin: 0.5em auto 0 auto;
+			}
+
+			.Card_interact_item {
+				width: 3.5em;
+				height: 3.5em;
+				background: none;
+				border: none;
+				border-radius: 100%;
+				padding: 1em;
+				cursor: pointer;
+
+				.fas.fa-trash {
+					font-size: 1.4em;
+				}
+
+				.fas.fa-save {
+					font-size: 1.4em;
+				}
+			}
+		}
+
+		.CardimageHolder {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			cursor: pointer;
+
+			.Card_image {
+				height: 8em;
+				width: 80%;
+				margin: 0.5em 0 0 0;
+				cursor: pointer;
+			}
+		}
+
+		.Card_text {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background-color: #ffffff;
+			border-radius: 0 0 0.5em 0.5em;
+			min-height: 3em;
+			padding: 1em;
+			color: #262626;
+
+			.Card_description {
+				background-color: #ffffff;
+				text-align: center;
+				font-family: "Quicksand", sans-serif;
+				font-weight: 600;
+				font-size: 1em;
+			}
+		}
+
+		@keyframes cardDisplayed {
+			0% {
+				opacity: 0.5;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+
+	.fullCard {
+		background-color: white;
+		font-family: "Quicksand", sans-serif;
+		min-height: 10vh;
+		border-radius: 0.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// padding: 0.8em 0.8em 1.3em 0.8em;
+		width: 90vw;
+		max-width: 24em;
+		margin: 0 auto auto auto;
+		transition: transform 0.2s ease;
+
+		&.calculated {
+			margin: 0.5em 0.5em 1em 0.5em;
+		}
+
+		.cardContentTitle {
+			text-align: center;
+			margin-top: 0.5em;
+			max-width: 90%;
+			color: #262626;
+			// color: black;
+		}
+
+		.cardContentImage {
+			margin-top: 1em;
+			height: 11em;
+			width: 80%;
+			user-select: none;
+		}
+
+		@keyframes showResults {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+
+}
+
+// .fade-enter {
+//     opacity: 0;
+//     transform: scale(0.9)
+// }
+
+// .fade-enter.fade-enter-active {
+//     opacity: 1;
+//     transform: scale(1);
+//     transition: 1000ms ease-out;
+// }
+
+.myAnimation-enter {
+	opacity: 0.5;
+	transform: scale(0.95);
+}
+
+.myAnimation-enter-active {
+	opacity: 1;
+	transform: scale(1);
+	transition: 300ms ease-out;
+}
+
+.myAnimation-enter-done {
+	opacity: 1;
+}
+
+.myAnimation-exit {
+	opacity: 1;
+	// transform: scale(0.5);
+}
+
+.myAnimation-exit-active {
+	opacity: 0;
+	// transform: scale(1);
+	transition: opacity 0ms;
+}
+
+.myAnimation-exit-done {
+	opacity: 0;
+}
+
+// @keyframes myCoolAnimation {
+//     0% {
+//         font-size: 10px;
+//         }
+//     100% {
+//     font-size: 12px;
+//     }
+// }
+
+// .myAnimation-exit {
+//     transform: scale(1);
+//     // opacity: 1;
+// }
+
+// .myAnimation-exit.myAnimation-exit-active {
+//     transform: scale(0.5);
+//     // opacity: 0;
+//     transition: transform 300ms ease-out;
+// }
