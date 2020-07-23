@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Calc-Cards/static/css/main.c1052375.chunk.css",
-    "main.js": "/Calc-Cards/static/js/main.a51bb5f8.chunk.js",
-    "main.js.map": "/Calc-Cards/static/js/main.a51bb5f8.chunk.js.map",
+    "main.css": "/Calc-Cards/static/css/main.f62b041a.chunk.css",
+    "main.js": "/Calc-Cards/static/js/main.c6b6f681.chunk.js",
+    "main.js.map": "/Calc-Cards/static/js/main.c6b6f681.chunk.js.map",
     "runtime-main.js": "/Calc-Cards/static/js/runtime-main.a5f051c2.js",
     "runtime-main.js.map": "/Calc-Cards/static/js/runtime-main.a5f051c2.js.map",
     "static/js/2.902f470a.chunk.js": "/Calc-Cards/static/js/2.902f470a.chunk.js",
     "static/js/2.902f470a.chunk.js.map": "/Calc-Cards/static/js/2.902f470a.chunk.js.map",
     "index.html": "/Calc-Cards/index.html",
-    "precache-manifest.648ec80a5ff5a4bb8644487ad16cac2a.js": "/Calc-Cards/precache-manifest.648ec80a5ff5a4bb8644487ad16cac2a.js",
+    "precache-manifest.d806bd3d9dc07cb72949f4ec7452dce5.js": "/Calc-Cards/precache-manifest.d806bd3d9dc07cb72949f4ec7452dce5.js",
     "service-worker.js": "/Calc-Cards/service-worker.js",
-    "static/css/main.c1052375.chunk.css.map": "/Calc-Cards/static/css/main.c1052375.chunk.css.map",
+    "static/css/main.f62b041a.chunk.css.map": "/Calc-Cards/static/css/main.f62b041a.chunk.css.map",
     "static/js/2.902f470a.chunk.js.LICENSE.txt": "/Calc-Cards/static/js/2.902f470a.chunk.js.LICENSE.txt",
     "static/media/Logo Black.png": "/Calc-Cards/static/media/Logo Black.741b0671.png",
     "static/media/calcCardsLogo.svg": "/Calc-Cards/static/media/calcCardsLogo.d088e79b.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.a5f051c2.js",
     "static/js/2.902f470a.chunk.js",
-    "static/css/main.c1052375.chunk.css",
-    "static/js/main.a51bb5f8.chunk.js"
+    "static/css/main.f62b041a.chunk.css",
+    "static/js/main.c6b6f681.chunk.js"
   ]
 }
