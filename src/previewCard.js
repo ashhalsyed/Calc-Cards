@@ -1,8 +1,18 @@
 import React, { Component } from "react";
 import "./styles/allStyles.scss";
-import allImages from "./Card Data/allImages.json";
+// import allImages from "./Card Data/allImages.json";
 import AllUserInput from "./allUserInput";
 import AllUserOutput from "./allUserOutput";
+
+import circleSVG from './Card Data/Card Images/circle.svg'
+import cubeSVG from './Card Data/Card Images/cube.svg'
+import cylinderSVG from './Card Data/Card Images/cylinder.svg'
+import lineSVG from './Card Data/Card Images/line.svg'
+import noImageSVG from './Card Data/Card Images/noImage.svg'
+import rectangleSVG from './Card Data/Card Images/rectangle.svg'
+import sphereSVG from './Card Data/Card Images/sphere.svg'
+import squareSVG from './Card Data/Card Images/square.svg'
+import triangleSVG from './Card Data/Card Images/triangle.svg'
 
 class previewCard extends Component {
 	constructor() {
@@ -95,7 +105,40 @@ class previewCard extends Component {
 				steps: [],
 				formula: ""
 			};
-			let requiredCardImage = allImages.images[requiredCard.image];
+			// let requiredCardImage = allImages.images[requiredCard.image];
+
+			let requiredCardImage;
+
+			if (requiredCard.image === "circle") {
+				requiredCardImage = circleSVG
+			}
+			if (requiredCard.image === "cube") {
+				requiredCardImage = cubeSVG
+			}
+			if (requiredCard.image === "cylinder") {
+				requiredCardImage = cylinderSVG
+			}
+			if (requiredCard.image === "line") {
+				requiredCardImage = lineSVG
+			}
+			if (requiredCard.image === "") {
+				requiredCardImage = noImageSVG
+			}
+			if (requiredCard.image === "rectangle") {
+				requiredCardImage = rectangleSVG
+			}
+			if (requiredCard.image === "sphere") {
+				requiredCardImage = sphereSVG
+			}
+			if (requiredCard.image === "square") {
+				requiredCardImage = squareSVG
+			}
+			if (requiredCard.image === "triangle") {
+				requiredCardImage = triangleSVG
+			}
+
+
+
 			previewContent = (
 				<div className="previewCard">
 					<div className="arrowHolder">
@@ -157,7 +200,38 @@ class previewCard extends Component {
 				</div>
 			);
 		} else {
-			let requiredCardImage = allImages.images[requiredCard.image];
+			// let requiredCardImage = allImages.images[requiredCard.image];
+
+			let requiredCardImage;
+
+			if (requiredCard.image === "circle") {
+				requiredCardImage = circleSVG
+			}
+			if (requiredCard.image === "cube") {
+				requiredCardImage = cubeSVG
+			}
+			if (requiredCard.image === "cylinder") {
+				requiredCardImage = cylinderSVG
+			}
+			if (requiredCard.image === "line") {
+				requiredCardImage = lineSVG
+			}
+			if (requiredCard.image === "") {
+				requiredCardImage = noImageSVG
+			}
+			if (requiredCard.image === "rectangle") {
+				requiredCardImage = rectangleSVG
+			}
+			if (requiredCard.image === "sphere") {
+				requiredCardImage = sphereSVG
+			}
+			if (requiredCard.image === "square") {
+				requiredCardImage = squareSVG
+			}
+			if (requiredCard.image === "triangle") {
+				requiredCardImage = triangleSVG
+			}
+
 			previewContent = (
 				<div className="previewCard">
 					<div className="arrowHolder">
@@ -221,7 +295,6 @@ class previewCard extends Component {
 				</div>
 			);
 		}
-		console.log(previewContent);
 		return <div>{previewContent}</div>;
 	}
 }

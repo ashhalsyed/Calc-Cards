@@ -1,7 +1,17 @@
 import React, { Component } from "react";
 import "./styles/allStyles.scss";
 import allImages from "./Card Data/allImages.json";
-import * as firebase from "firebase";
+import firebase from "firebase";
+
+import circleSVG from './Card Data/Card Images/circle.svg'
+import cubeSVG from './Card Data/Card Images/cube.svg'
+import cylinderSVG from './Card Data/Card Images/cylinder.svg'
+import lineSVG from './Card Data/Card Images/line.svg'
+import noImageSVG from './Card Data/Card Images/noImage.svg'
+import rectangleSVG from './Card Data/Card Images/rectangle.svg'
+import sphereSVG from './Card Data/Card Images/sphere.svg'
+import squareSVG from './Card Data/Card Images/square.svg'
+import triangleSVG from './Card Data/Card Images/triangle.svg'
 
 class requestACard extends Component {
 	constructor() {
@@ -293,6 +303,36 @@ class requestACard extends Component {
 		// console.log(this.state.currentID);
 		// console.log(this.state.allCardData);
 
+		let currentCardImage = this.state.imagePicked
+
+		if (currentCardImage === "circle") {
+			currentCardImage = circleSVG
+		}
+		if (currentCardImage === "cube") {
+			currentCardImage = cubeSVG
+		}
+		if (currentCardImage === "cylinder") {
+			currentCardImage = cylinderSVG
+		}
+		if (currentCardImage === "line") {
+			currentCardImage = lineSVG
+		}
+		if (currentCardImage === "") {
+			currentCardImage = noImageSVG
+		}
+		if (currentCardImage === "rectangle") {
+			currentCardImage = rectangleSVG
+		}
+		if (currentCardImage === "sphere") {
+			currentCardImage = sphereSVG
+		}
+		if (currentCardImage === "square") {
+			currentCardImage = squareSVG
+		}
+		if (currentCardImage === "triangle") {
+			currentCardImage = triangleSVG
+		}
+
 		return (
 			<div className="requestACard">
 				<div className="arrowHolder">
@@ -319,7 +359,8 @@ class requestACard extends Component {
 					/>
 					<img
 						className="previewImage"
-						src={allImages.images[this.state.imagePicked]}
+						// src={allImages.images[this.state.imagePicked]}
+						src={currentCardImage}
 						alt={"preview of card"}
 					/>
 					<select

@@ -3,8 +3,18 @@ import "./styles/allStyles.scss";
 import AllUserInput from "./allUserInput";
 import AllUserOutput from "./allUserOutput";
 import data from "./Card Data/data.json";
-import allImages from "./Card Data/allImages.json";
+// import allImages from "./Card Data/allImages.json";
 import { CSSTransition } from "react-transition-group";
+
+import circleSVG from './Card Data/Card Images/circle.svg'
+import cubeSVG from './Card Data/Card Images/cube.svg'
+import cylinderSVG from './Card Data/Card Images/cylinder.svg'
+import lineSVG from './Card Data/Card Images/line.svg'
+import noImageSVG from './Card Data/Card Images/noImage.svg'
+import rectangleSVG from './Card Data/Card Images/rectangle.svg'
+import sphereSVG from './Card Data/Card Images/sphere.svg'
+import squareSVG from './Card Data/Card Images/square.svg'
+import triangleSVG from './Card Data/Card Images/triangle.svg'
 
 class cardContent extends Component {
 	constructor(props) {
@@ -74,7 +84,39 @@ class cardContent extends Component {
 			}
 		}
 
-		const currentCardImage = allImages.images[requiredCard.image];
+		// const currentCardImage = allImages.images[requiredCard.image];
+
+		let currentCardImage;
+
+		if (requiredCard.image === "circle") {
+			currentCardImage = circleSVG
+		}
+		if (requiredCard.image === "cube") {
+			currentCardImage = cubeSVG
+		}
+		if (requiredCard.image === "cylinder") {
+			currentCardImage = cylinderSVG
+		}
+		if (requiredCard.image === "line") {
+			currentCardImage = lineSVG
+		}
+		if (requiredCard.image === "") {
+			currentCardImage = noImageSVG
+		}
+		if (requiredCard.image === "rectangle") {
+			currentCardImage = rectangleSVG
+		}
+		if (requiredCard.image === "sphere") {
+			currentCardImage = sphereSVG
+		}
+		if (requiredCard.image === "square") {
+			currentCardImage = squareSVG
+		}
+		if (requiredCard.image === "triangle") {
+			currentCardImage = triangleSVG
+		}
+
+
 		return (
 			<div className="cardContent">
 				<div className="arrowHolder">

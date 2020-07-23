@@ -1,6 +1,17 @@
 import React, { Component } from "react";
 import "./styles/allStyles.scss";
 import { Link } from "react-router-dom";
+
+import circleSVG from './Card Data/Card Images/circle.svg'
+import cubeSVG from './Card Data/Card Images/cube.svg'
+import cylinderSVG from './Card Data/Card Images/cylinder.svg'
+import lineSVG from './Card Data/Card Images/line.svg'
+import noImageSVG from './Card Data/Card Images/noImage.svg'
+import rectangleSVG from './Card Data/Card Images/rectangle.svg'
+import sphereSVG from './Card Data/Card Images/sphere.svg'
+import squareSVG from './Card Data/Card Images/square.svg'
+import triangleSVG from './Card Data/Card Images/triangle.svg'
+
 // import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 class Cards extends Component {
@@ -31,9 +42,39 @@ class Cards extends Component {
 						cardDesription = currentCard.description;
 					}
 
-					const currentCardImage = this.props.allImages[
-						currentCard.image
-					];
+					// const currentCardImage = this.props.allImages[
+					// 	currentCard.image
+					// ];
+
+					let currentCardImage;
+
+					if (currentCard.image === "circle") {
+						currentCardImage = circleSVG
+					}
+					if (currentCard.image === "cube") {
+						currentCardImage = cubeSVG
+					}
+					if (currentCard.image === "cylinder") {
+						currentCardImage = cylinderSVG
+					}
+					if (currentCard.image === "line") {
+						currentCardImage = lineSVG
+					}
+					if (currentCard.image === "") {
+						currentCardImage = noImageSVG
+					}
+					if (currentCard.image === "rectangle") {
+						currentCardImage = rectangleSVG
+					}
+					if (currentCard.image === "sphere") {
+						currentCardImage = sphereSVG
+					}
+					if (currentCard.image === "square") {
+						currentCardImage = squareSVG
+					}
+					if (currentCard.image === "triangle") {
+						currentCardImage = triangleSVG
+					}
 
 					let CardTopbar;
 					if (showSave) {
