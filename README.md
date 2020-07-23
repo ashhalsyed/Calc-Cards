@@ -1,5 +1,7 @@
 # Calc Cards
 
+![gif preview](https://github.com/ashhalsyed/Calc-Cards/blob/master/src/assets/calcCardsPreviewGif.gif)
+
 A platform for creating and using Calc Cards
 
 ## Getting Started
