@@ -62,7 +62,7 @@ class sideDrawer extends Component {
               onClick={this.props.toggle}
             >
               <i class="fas fa-square" />
-              <h1 className="sideBarLinkText">Savedd Cards</h1>
+              <h1 className="sideBarLinkText">Saved Cards</h1>
             </Link>
 
             <Link
