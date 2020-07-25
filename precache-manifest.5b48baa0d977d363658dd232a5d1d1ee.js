@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d1ff0b40e6527d8a78cf6f24e22ecf0f",
+    "revision": "d9335124cf54c2fc9e7f5d4d3a562787",
     "url": "/Calc-Cards/index.html"
   },
   {
-    "revision": "a5babcc98e11672819ec",
+    "revision": "0bc842df95bc5757dc28",
     "url": "/Calc-Cards/static/css/main.f62b041a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Calc-Cards/static/js/2.902f470a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a5babcc98e11672819ec",
-    "url": "/Calc-Cards/static/js/main.c50e0044.chunk.js"
+    "revision": "0bc842df95bc5757dc28",
+    "url": "/Calc-Cards/static/js/main.e402e14e.chunk.js"
   },
   {
     "revision": "c13a35fc7521246e6699",
